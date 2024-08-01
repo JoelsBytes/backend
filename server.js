@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4000;
+const PORT = process.env.PORT || 3000;
 
 // Array of quotes
 const quotes = [
@@ -21,6 +21,6 @@ app.get('/quote', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running at ${PORT}`);
 });
